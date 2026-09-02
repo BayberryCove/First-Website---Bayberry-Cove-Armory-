@@ -1,0 +1,564 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-red: #D51C29;
+    --dark-gray: #191919;
+    --light-gray: #F5F5F5;
+    --white: #FFFFFF;
+    --text-dark: #2c2c2c;
+    --border-gray: #E0E0E0;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary-red);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--dark-gray) 0%, #2d2d2d 100%);
+    color: var(--white);
+    padding: 120px 20px;
+    text-align: center;
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 700px;
+    animation: fadeInUp 0.8s ease;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-red);
+    font-weight: 500;
+}
+
+.hero-tagline {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #ddd;
+    font-style: italic;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button-primary {
+    background-color: var(--primary-red);
+    color: var(--white);
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 12px rgba(213, 28, 41, 0.3);
+}
+
+.cta-button-primary:hover {
+    background-color: #c01524;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(213, 28, 41, 0.4);
+}
+
+.cta-button-secondary {
+    background-color: transparent;
+    color: var(--white);
+    padding: 14px 32px;
+    border: 2px solid var(--white);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.cta-button-secondary:hover {
+    background-color: var(--white);
+    color: var(--primary-red);
+}
+
+/* Legal Banner */
+.legal-banner {
+    background-color: var(--primary-red);
+    color: var(--white);
+    padding: 1.2rem 20px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.legal-banner p {
+    margin: 0;
+}
+
+/* Contact Bar */
+.contact-bar {
+    background-color: var(--light-gray);
+    padding: 2rem 20px;
+    border-bottom: 2px solid var(--border-gray);
+}
+
+.contact-bar-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.contact-bar-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-bar-item .icon {
+    font-size: 1.5rem;
+}
+
+.contact-bar-item p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.contact-bar-item a {
+    color: var(--primary-red);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-bar-item a:hover {
+    text-decoration: underline;
+}
+
+/* Services Section */
+.services {
+    padding: 80px 20px;
+    background-color: var(--light-gray);
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--dark-gray);
+    font-weight: 700;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: var(--transition);
+    border-top: 4px solid var(--primary-red);
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    color: var(--dark-gray);
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.pricing-box {
+    background-color: var(--light-gray);
+    padding: 1.2rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.pricing-box p {
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    padding: 0.3rem 0;
+}
+
+.pricing-box p:first-child {
+    color: var(--primary-red);
+    font-weight: 600;
+}
+
+.pricing-box p strong {
+    color: var(--dark-gray);
+}
+
+/* Credentials Section */
+.credentials {
+    padding: 80px 20px;
+    background-color: var(--white);
+}
+
+.credentials h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--dark-gray);
+    font-weight: 700;
+}
+
+.credentials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.credential-item {
+    background-color: var(--light-gray);
+    padding: 2rem;
+    border-radius: 4px;
+    border-left: 4px solid var(--primary-red);
+}
+
+.credential-item h3 {
+    color: var(--dark-gray);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.credential-item p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+}
+
+/* Service Area Section */
+.service-area {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.service-area h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.area-text {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #ddd;
+}
+
+.appointment-notice {
+    background-color: var(--primary-red);
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.hours-display {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 4px;
+    display: inline-block;
+    border: 1px solid var(--primary-red);
+}
+
+.hours-display h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.hours-display p {
+    font-size: 1rem;
+    margin: 0.4rem 0;
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 20px;
+    background-color: var(--light-gray);
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--dark-gray);
+    font-weight: 700;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-info h3 {
+    font-size: 1.3rem;
+    color: var(--dark-gray);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.contact-info p {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.contact-info a {
+    color: var(--primary-red);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.hours-list {
+    list-style: none;
+    margin: 1rem 0 1.5rem 0;
+    font-size: 0.95rem;
+}
+
+.hours-list li {
+    padding: 0.4rem 0;
+    color: #666;
+}
+
+.note {
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    padding: 12px 14px;
+    border: 1px solid var(--border-gray);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-red);
+    box-shadow: 0 0 8px rgba(213, 28, 41, 0.2);
+}
+
+.submit-button {
+    background-color: var(--primary-red);
+    color: var(--white);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.submit-button:hover {
+    background-color: #c01524;
+}
+
+.success-message {
+    text-align: center;
+    color: #27ae60;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+}
+
+.legal-footer {
+    color: var(--primary-red);
+    font-size: 0.85rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-tagline {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .cta-button-primary,
+    .cta-button-secondary {
+        width: 100%;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .services h2,
+    .credentials h2,
+    .contact h2 {
+        font-size: 1.8rem;
+    }
+
+    .services-grid,
+    .credentials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-bar-items {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
